@@ -92,6 +92,15 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             "sandbox_high"
         ];
 
+        /*
+        const items = tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution
+        for (const item in items) {
+            if (items[item].tpl = '5d40407c86f774318526545a') {
+                console.log(items[item])
+            }
+        }
+            */
+
         for (const item of itemCreate.loot){
             const lootComposedKey = item.newId + '_composedkey';
             for(const map of maps) {
@@ -146,6 +155,8 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             }
         }
         this.logger.debug(`[${this.mod}] postDb Loaded`);
+
+        this.logger.success("[Hood Energy Drinks] Energy Drinks Loaded!");
     }
 }
 

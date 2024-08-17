@@ -19,55 +19,85 @@ export class TraderHelper
         const vfs = container.resolve<VFS>("VFS")
         const config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
         
-        assortCreator.createSingleAssortItem("a_monster_energy")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("b_monster_energy_blue")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("c_monster_energy_white")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("d_monster_energy_strawberry")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("e_monster_energy_doctor")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("f_monster_energy_punch")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("g_monster_energy_lemonade")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("h_nos_energy")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("i_bang_energy")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
-        assortCreator.createSingleAssortItem("j_ghost_energy")
-                                .addStackCount(999)
-                                .addMoneyCost(Money.ROUBLES, 10000)
-                                .addLoyaltyLevel(1)
-                                .export(tables.traders[traderId]);
+        if (config.config['monster_green_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("a_monster_energy")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['monster_green_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['monster_green_price'])
+                                     .addLoyaltyLevel(config.config['monster_green_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['monster_blue_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("b_monster_energy_blue")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['monster_blue_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['monster_blue_price'])
+                                     .addLoyaltyLevel(config.config['monster_blue_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['monster_white_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("c_monster_energy_white")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['monster_white_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['monster_white_price'])
+                                     .addLoyaltyLevel(config.config['monster_white_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['monster_strawberry_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("d_monster_energy_strawberry")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['monster_strawberry_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['monster_strawberry_price'])
+                                     .addLoyaltyLevel(config.config['monster_strawberry_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['ghost_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("e_ghost_energy")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['ghost_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['ghost_price'])
+                                     .addLoyaltyLevel(config.config['ghost_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['nos_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("f_nos_energy")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['nos_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['nos_price'])
+                                     .addLoyaltyLevel(config.config['nos_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['monster_punch_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("g_monster_energy_punch")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['monster_punch_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['monster_punch_price'])
+                                     .addLoyaltyLevel(config.config['monster_punch_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['bang_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("h_bang_energy")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['bang_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['bang_price'])
+                                     .addLoyaltyLevel(config.config['bang_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['monster_doctor_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("i_monster_energy_doctor")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['monster_doctor_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['monster_doctor_price'])
+                                     .addLoyaltyLevel(config.config['monster_doctor_loyalty_level'])
+                                     .export(tables.traders[traderId]);\
+        }
+        if (config.config['monster_lemonade_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("j_monster_energy_lemonade")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['monster_lemonade_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['monster_lemonade_price'])
+                                     .addLoyaltyLevel(config.config['monster_lemonade_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
      }
 }
