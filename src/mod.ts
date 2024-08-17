@@ -30,7 +30,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
     public config: any;
 
     constructor() {
-        this.mod = "Hoods-Energy-Drinks";
+        this.mod = "Hood-Energy-Drinks";
     }
 
     /**
@@ -89,7 +89,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             "lighthouse",
             "laboratory",
             "sandbox",    // groundzero
-            //"sandbox_high"// groundzero20
+            "sandbox_high"
         ];
 
         for (const item of itemCreate.loot){
