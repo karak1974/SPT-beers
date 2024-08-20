@@ -30,7 +30,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
     public config: any;
 
     constructor() {
-        this.mod = "Hood-Energy-Drinks";
+        this.mod = "Hoods Energy Drinks";
     }
 
     /**
@@ -92,14 +92,18 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
             "sandbox_high"
         ];
 
-        /*
+        //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution[217])
+        
         const items = tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution
+        
         for (const item in items) {
-            if (items[item].tpl = '5d40407c86f774318526545a') {
+            if (items[item].tpl == '5d40407c86f774318526545a') {
+                console.log(item)
                 console.log(items[item])
             }
         }
-            */
+            
+            
 
         for (const item of itemCreate.loot){
             const lootComposedKey = item.newId + '_composedkey';

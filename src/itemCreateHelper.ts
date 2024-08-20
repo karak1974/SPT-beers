@@ -28,25 +28,25 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Endurance",
-                    "Value": 15
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Strength",
-                    "Value": 15
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "StaminaRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "",
                     "Value": 0.5
                 },
@@ -55,7 +55,7 @@ export class ItemCreateHelper {
                     "BuffType": "MaxStamina",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "",
                     "Value": 5
                 },
@@ -63,8 +63,8 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 240,
+                    "Delay": 300,
+                    "Duration": 120,
                     "SkillName": "Health",
                     "Value": -10
                 },
@@ -72,7 +72,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 50,
                     "SkillName": "",
                     "Value": -1
@@ -81,7 +81,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 120,
                     "SkillName": "",
                     "Value": 0
@@ -97,43 +97,43 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Perception",
-                    "Value": 20
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Intellect",
-                    "Value": 20
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Attention",
-                    "Value": 20
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Search",
-                    "Value": 20
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 240,
+                    "Delay": 300,
+                    "Duration": 120,
                     "SkillName": "Health",
                     "Value": -10
                 },
@@ -141,7 +141,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 50,
                     "SkillName": "",
                     "Value": -1
@@ -150,7 +150,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 120,
                     "SkillName": "",
                     "Value": 0
@@ -167,35 +167,8 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Endurance",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "Strength",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "",
-                    "Value": 0.25
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "",
                     "Value": 5
                 },
                 {
@@ -203,34 +176,61 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
+                    "SkillName": "Strength",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "StaminaRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
+                    "Value": 0.2
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "MaxStamina",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
+                    "Value": 3
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
                     "SkillName": "Perception",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Attention",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Search",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 240,
+                    "Delay": 300,
+                    "Duration": 120,
                     "SkillName": "Health",
                     "Value": -10
                 },
@@ -238,7 +238,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 50,
                     "SkillName": "",
                     "Value": -1
@@ -247,7 +247,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 120,
                     "SkillName": "",
                     "Value": 0
@@ -263,7 +263,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Endurance",
                     "Value": 5
                 },
@@ -272,7 +272,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Strength",
                     "Value": 5
                 },
@@ -281,7 +281,7 @@ export class ItemCreateHelper {
                     "BuffType": "HealthRate",
                     "Chance": 1,
                     "Delay": 1,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "",
                     "Value": 0.5
                   },
@@ -290,43 +290,43 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Vitality",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "Health",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "HeavyVests",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "LightVests",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 240,
+                    "Delay": 300,
+                    "Duration": 120,
                     "SkillName": "Health",
                     "Value": -10
                 },
@@ -334,7 +334,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 50,
                     "SkillName": "",
                     "Value": -1
@@ -343,7 +343,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 120,
                     "SkillName": "",
                     "Value": 0
@@ -397,7 +397,7 @@ export class ItemCreateHelper {
                     "Delay": 1,
                     "Duration": 360,
                     "SkillName": "",
-                    "Value": 0.25
+                    "Value": 0.20
                   },
                 {
                     "AbsoluteValue": true,
@@ -413,7 +413,7 @@ export class ItemCreateHelper {
                     "BuffType": "EnergyRate",
                     "Chance": 1,
                     "Delay": 360,
-                    "Duration": 60,
+                    "Duration": 50,
                     "SkillName": "",
                     "Value": -1
                 },
@@ -457,7 +457,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 240,
                     "SkillName": "",
-                    "Value": 1.5
+                    "Value": 1
                 },
                 {
                     "AbsoluteValue": true,
@@ -473,7 +473,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 240,
-                    "Duration": 240,
+                    "Duration": 120,
                     "SkillName": "Health",
                     "Value": -15
                 },
@@ -482,7 +482,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 240,
-                    "Duration": 240,
+                    "Duration": 120,
                     "SkillName": "Vitality",
                     "Value": -15
                 },
@@ -491,9 +491,9 @@ export class ItemCreateHelper {
                     "BuffType": "EnergyRate",
                     "Chance": 1,
                     "Delay": 240,
-                    "Duration": 50,
+                    "Duration": 60,
                     "SkillName": "",
-                    "Value": -1.2
+                    "Value": -1
                 },
                 {
                     "AbsoluteValue": true,
@@ -515,7 +515,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 360,
+                    "Duration": 300,
                     "SkillName": "Endurance",
                     "Value": 10
                 },
@@ -524,7 +524,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 360,
+                    "Duration": 300,
                     "SkillName": "Strength",
                     "Value": 10
                 },
@@ -533,25 +533,61 @@ export class ItemCreateHelper {
                     "BuffType": "StaminaRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 300,
                     "SkillName": "",
                     "Value": 0.5
                 },
                 {
-                    "AbsoluteValue": false,
-                    "BuffType": "WeightLimit",
+                    "AbsoluteValue": true,
+                    "BuffType": "HealthRate",
                     "Chance": 1,
                     "Delay": 1,
-                    "Duration": 720,
+                    "Duration": 24,
                     "SkillName": "",
-                    "Value": 0.20
-                  },
+                    "Value": 0.25
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "Perception",
+                    "Value": 10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "Intellect",
+                    "Value": 10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "Attention",
+                    "Value": 10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "Search",
+                    "Value": 10
+                },
                   {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 240,
+                    "Delay": 300,
+                    "Duration": 120,
                     "SkillName": "Vitality",
                     "Value": -15
                 },
@@ -559,16 +595,16 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 40,
                     "SkillName": "",
-                    "Value": -1.5
+                    "Value": -1
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 180,
                     "SkillName": "",
                     "Value": 0
@@ -584,7 +620,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 720,
+                    "Duration": 300,
                     "SkillName": "Endurance",
                     "Value": 5
                 },
@@ -593,7 +629,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 720,
+                    "Duration": 300,
                     "SkillName": "Strength",
                     "Value": 5
                 },
@@ -602,34 +638,34 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 720,
+                    "Duration": 300,
                     "SkillName": "HeavyVests",
-                    "Value": 20
+                    "Value": 15
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 720,
+                    "Duration": 300,
                     "SkillName": "LightVests",
-                    "Value": 20
+                    "Value": 15
                 },
                 {
                     "AbsoluteValue": false,
                     "BuffType": "DamageModifier",
-                    "Chance": 0.50,
+                    "Chance": 1,
                     "Delay": 0,
-                    "Duration": 720,
+                    "Duration": 300,
                     "SkillName": "",
-                    "Value": -0.2
+                    "Value": -0.1
                   },
                   {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 240,
-                    "Duration": 360,
+                    "Duration": 120,
                     "SkillName": "Vitality",
                     "Value": -15
                 },
@@ -638,16 +674,16 @@ export class ItemCreateHelper {
                     "BuffType": "EnergyRate",
                     "Chance": 1,
                     "Delay": 240,
-                    "Duration": 40,
+                    "Duration": 50,
                     "SkillName": "",
-                    "Value": -1.5
+                    "Value": -1
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
                     "Delay": 240,
-                    "Duration": 180,
+                    "Duration": 120,
                     "SkillName": "",
                     "Value": 0
                 }
@@ -722,12 +758,30 @@ export class ItemCreateHelper {
                 },
                 {
                     "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 240,
+                    "Duration": 120,
+                    "SkillName": "Health",
+                    "Value": -10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 240,
+                    "Duration": 120,
+                    "SkillName": "Vitality",
+                    "Value": -10
+                },
+                {
+                    "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
                     "Delay": 300,
                     "Duration": 50,
                     "SkillName": "",
-                    "Value": -1.5
+                    "Value": -1
                 },
                 {
                     "AbsoluteValue": true,
@@ -749,70 +803,70 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 120,
+                    "Duration": 240,
                     "SkillName": "Endurance",
-                    "Value": 50
+                    "Value": 30
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 120,
+                    "Duration": 240,
                     "SkillName": "Strength",
-                    "Value": 50
+                    "Value": 30
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "StaminaRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 120,
+                    "Duration": 240,
                     "SkillName": "",
-                    "Value": 3
+                    "Value": 2
                 },
                 {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 120,
+                    "Duration": 240,
                     "AbsoluteValue": true,
                     "SkillName": "StressResistance",
-                    "Value": 50,
+                    "Value": 30,
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 120,
+                    "Duration": 240,
                     "SkillName": "HeavyVests",
-                    "Value": 50
+                    "Value": 30
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 120,
+                    "Duration": 240,
                     "SkillName": "LightVests",
-                    "Value": 50
+                    "Value": 30
                 },
                 {
                     "AbsoluteValue": false,
                     "BuffType": "DamageModifier",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 120,
+                    "Duration": 240,
                     "SkillName": "",
-                    "Value": -0.25
+                    "Value": -0.15
                   },
                   {
                     "AbsoluteValue": true,
                     "BuffType": "HealthRate",
                     "Chance": 1,
                     "Delay": 1,
-                    "Duration": 120,
+                    "Duration": 240,
                     "SkillName": "",
                     "Value": 1.5
                   },
@@ -820,16 +874,16 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 120,
-                    "Duration": 30,
+                    "Delay": 240,
+                    "Duration": 60,
                     "SkillName": "",
-                    "Value": -2
+                    "Value": -1.2
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 120,
+                    "Delay": 240,
                     "Duration": 120,
                     "SkillName": "",
                     "Value": 0
@@ -838,7 +892,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "QuantumTunnelling",
                     "Chance": 1,
-                    "Delay": 120,
+                    "Delay": 240,
                     "Duration": 60,
                     "SkillName": "",
                     "Value": 0
@@ -886,14 +940,14 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "a_monster_energy", 
-            fleaPriceRoubles: 100000,
-            handbookPriceRoubles: 80000,
+            fleaPriceRoubles: 85000,
+            handbookPriceRoubles: 70000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
                     name: "Monster Original Green Energy Drink",
                     shortName: "Monster",
-                    description: `Monster Energy is not just a drink. It's a lifestyle in a can. Monster is the relentless pursuit of victory, being your best, being at the top of your game. It is the most badass energy drink on the planet. Monster is the world's greatest skiers and skaters, boarders and bikers, rockers and racers, gamers and Girls. Monster Energy — Unleash the Beast!`
+                    description: `The Original Green Monster Energy Drink is Tarkov's most scavenged and desired energy drink. Scavs and PMCs alike horde this beverage for both for its taste and affects, which help keep their energy and stamina up longer during raids.`
                 }
             },
             addToStaticLoot: {
@@ -934,14 +988,14 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "b_monster_energy_blue", 
-            fleaPriceRoubles: 100000,
-            handbookPriceRoubles: 80000,
+            fleaPriceRoubles: 85000,
+            handbookPriceRoubles: 70000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
                     name: "Monster Original Lo-Carb Energy Drink",
                     shortName: "Monster",
-                    description: `Monster Energy Lo-Carb packs a powerful punch and has a smooth, easy drinking flavor, but without glucose. Get the big bad Monster buzz you know and love, but with a sweet & salty citrus twist with a fraction of the carbohydrates and only 30 calories per can and with 140mg of Caffeine.`
+                    description: `The Lo-Carb Monster Energy Drink is a favorite among scavs that have a taste for increased their ability in scavenging faster and staying alert longer in-raid. Monster Energy Lo-Carb packs a powerful punch and has a smooth, easy drinking flavor, but without glucose. Get the big bad Monster buzz you know and love, but with a sweet & salty citrus twist with a fraction of the carbohydrates and only 30 calories per can and with 140mg of Caffeine.`
                 }
             }
         }
@@ -973,8 +1027,8 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "c_monster_energy_white", 
-            fleaPriceRoubles: 100000,
-            handbookPriceRoubles: 80000,
+            fleaPriceRoubles: 90000,
+            handbookPriceRoubles: 75000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
