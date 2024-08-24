@@ -30,7 +30,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Endurance",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
@@ -39,7 +39,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Strength",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
@@ -73,7 +73,7 @@ export class ItemCreateHelper {
                     "BuffType": "EnergyRate",
                     "Chance": 1,
                     "Delay": 300,
-                    "Duration": 50,
+                    "Duration": 40,
                     "SkillName": "",
                     "Value": -1
                 },
@@ -99,7 +99,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Perception",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
@@ -108,7 +108,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Intellect",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
@@ -117,7 +117,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Attention",
-                    "Value": 10
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
@@ -126,7 +126,25 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Search",
-                    "Value": 10
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "StaminaRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
+                    "Value": 0.3
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "MaxStamina",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
+                    "Value": 3
                 },
                 {
                     "AbsoluteValue": true,
@@ -142,7 +160,7 @@ export class ItemCreateHelper {
                     "BuffType": "EnergyRate",
                     "Chance": 1,
                     "Delay": 300,
-                    "Duration": 50,
+                    "Duration": 40,
                     "SkillName": "",
                     "Value": -1
                 },
@@ -196,7 +214,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "",
-                    "Value": 3
+                    "Value": 2
                 },
                 {
                     "AbsoluteValue": true,
@@ -232,6 +250,15 @@ export class ItemCreateHelper {
                     "Delay": 300,
                     "Duration": 120,
                     "SkillName": "Health",
+                    "Value": -10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 300,
+                    "Duration": 120,
+                    "SkillName": "Vitality",
                     "Value": -10
                 },
                 {
@@ -542,7 +569,7 @@ export class ItemCreateHelper {
                     "BuffType": "HealthRate",
                     "Chance": 1,
                     "Delay": 1,
-                    "Duration": 24,
+                    "Duration": 300,
                     "SkillName": "",
                     "Value": 0.25
                 },
@@ -622,7 +649,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Endurance",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
@@ -631,7 +658,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Strength",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
@@ -664,16 +691,25 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
+                    "Duration": 120,
+                    "SkillName": "Health",
+                    "Value": -10
+                },
+                  {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 300,
                     "Duration": 120,
                     "SkillName": "Vitality",
-                    "Value": -15
+                    "Value": -10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 300,
                     "Duration": 50,
                     "SkillName": "",
                     "Value": -1
@@ -951,12 +987,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 3000,
-                "5909e4b686f7747f5b744fa4": 3000,
-                "578f8778245977358849a9b5": 4000,
-                "5d6fd13186f77424ad2a8c69": 6000,
-                "5d6d2b5486f774785c2ba8ea": 5000,
-            }
+                "578f87a3245977356274f2cb": 400, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 200, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 500, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 250, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 250, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.6
         }
 
         this.loot.push(monester_energy);
@@ -997,8 +1034,18 @@ export class ItemCreateHelper {
                     shortName: "Monster",
                     description: `The Lo-Carb Monster Energy Drink is a favorite among scavs that have a taste for increased their ability in scavenging faster and staying alert longer in-raid. Monster Energy Lo-Carb packs a powerful punch and has a smooth, easy drinking flavor, but without glucose. Get the big bad Monster buzz you know and love, but with a sweet & salty citrus twist with a fraction of the carbohydrates and only 30 calories per can and with 140mg of Caffeine.`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 400, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 200, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 500, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 250, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 250, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.6
         }
+
+        this.loot.push(monester_energy_blue);
 
         const monester_energy_white: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1027,8 +1074,8 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "c_monster_energy_white", 
-            fleaPriceRoubles: 90000,
-            handbookPriceRoubles: 75000,
+            fleaPriceRoubles: 95000,
+            handbookPriceRoubles: 85000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1036,8 +1083,18 @@ export class ItemCreateHelper {
                     shortName: "Monster",
                     description: `The light, refreshing citrus flavor of Zero Ultra has broken the rules of flavor. 10 calories, zero sugar, and a full load of our Monster Energy blend to keep the good times rolling.`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 350, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 175, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 500, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 200, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 200, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.45
         }
+
+        this.loot.push(monester_energy_white);
 
         const monester_energy_strawberry: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1075,8 +1132,18 @@ export class ItemCreateHelper {
                     shortName: "Monster",
                     description: `Take just one sip and you'll be crazy for Ultra Strawberry Dreams. Wonderfully sweet, while slightly tart, this easy-drinking Ultra tastes like a dream. Packed with the Monster Energy blend you love, with just 10 calories and zero sugar.`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 250, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 150, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 200, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 150, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 150, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.3
         }
+
+        this.loot.push(monester_energy_strawberry);
 
         const ghost_energy: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1114,8 +1181,18 @@ export class ItemCreateHelper {
                     shortName: "Ghost",
                     description: `test`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 250, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 150, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 200, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 150, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 150, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.3
         }
+
+        this.loot.push(ghost_energy);
 
         const nos_energy: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1153,8 +1230,18 @@ export class ItemCreateHelper {
                     shortName: "NOS",
                     description: `Fuel Up. Fire Up. 100 mile an hour power. Thundering from top gear to no fear, the super-charged take charge. It's time to strap in, or sit it out. How Hard Will You Drive? High Performance Energy.`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 200, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 150, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 200, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 100, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 150, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.3
         }
+
+        this.loot.push(nos_energy);
 
         const monester_energy_punch: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1192,8 +1279,18 @@ export class ItemCreateHelper {
                     shortName: "Monster",
                     description: `Like the Banzai Pipeline of Oahu, Pipeline Punch was destined to become a legend. The perfect carbonated blend of passion fruit, orange, guava, and our Monster Energy blend.`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 150, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 100, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 125, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.2
         }
+
+        this.loot.push(monester_energy_punch);
 
         const bang_energy: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1231,8 +1328,18 @@ export class ItemCreateHelper {
                     shortName: "Bang",
                     description: `Bang is not your stereotypical high sugar, life-sucking soda masquerading as an energy drink! High sugar drinks spike blood sugar producing metabolic mayhem causing you to crash harder than a test dummy into a brick wall. Every 16-ounce can of Bang contains 300 milligrams of caffeine, which studies have shown may increase endurance, as well as strength in some cases, along with essential amino acids, CoQ10 and Super Creatine.`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 125, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 125, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 125, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.15
         }
+
+        this.loot.push(bang_energy);
 
         const monester_energy_doctor: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1270,8 +1377,18 @@ export class ItemCreateHelper {
                     shortName: "Monster",
                     description: `Monster Energy Valentino Rossi VR46 500ml Carbonated Energy Drink and 160mg caffeine. VR46 tastes unlike traditional energy drinks with a light, crisp and refreshing citrus taste. We teamed up with MotoGP Champion, Valentino Rossi AKA ""The Doctor"", to create our fastest Monster yet. Serve cold for maximum refreshment.`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 100, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 100, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 100, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.1
         }
+
+        this.loot.push(monester_energy_doctor);
 
         const monester_energy_lemonade: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1309,8 +1426,18 @@ export class ItemCreateHelper {
                     shortName: "Monster",
                     description: `Inspired by the land down under and powered by our world-famous Monster Energy blend, Aussie Style Lemonade is a carbonated exotic twist on lemonade. Tart yet sweet, with a burst of fresh citrus flavor.`
                 }
-            }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": 100, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 100, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 100, // vodka 171 // energy drink 328
+            },
+            looseLootSpawnWeight: 0.1
         }
+
+        this.loot.push(monester_energy_lemonade);
 
         
         customItem.createItemFromClone(monester_energy);

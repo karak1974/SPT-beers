@@ -20,7 +20,7 @@ import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
 import path from "path";
 
-class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
+class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
 {
     private mod: string
     private logger: ILogger
@@ -93,12 +93,13 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
         ];
 
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution[217])
+        //console.log(tables.locations["bigmap"].staticLoot["5d6fd13186f77424ad2a8c69"].itemDistribution)
         
-        const items = tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution
+        const items = tables.locations["bigmap"].staticLoot["5d6d2b5486f774785c2ba8ea"].itemDistribution
         
         for (const item in items) {
-            if (items[item].tpl == '5d40407c86f774318526545a') {
-                console.log(item)
+            if (items[item].tpl == '5751435d24597720a27126d1') {
+                //console.log(item)
                 console.log(items[item])
             }
         }
@@ -113,11 +114,12 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
                     if (name == map) {
                         for (const point of mapdata.looseLoot.spawnpoints) {
                             for (const itm of point.template.Items) {
-                                if (itm._tpl == "5d40407c86f774318526545a") { // Vodka
+                                if (itm._tpl == "5751435d24597720a27126d1") { // Max Energy energy drink
                                     const originalItemID = itm._id;
-
+                                    let originRelativeProb: any;
                                     for (const dist of point.itemDistribution) {
                                         if (dist.composedKey.key == originalItemID) {
+                                            originRelativeProb = dist.relativeProbability;
                                             point.template.Items.push({
                                                 _id: lootComposedKey,
                                                 _tpl: item.newId,
@@ -128,7 +130,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
                                         composedKey: {
                                             key: lootComposedKey,
                                         },
-                                        relativeProbability: 9999999999
+                                        relativeProbability: Math.max(Math.round(originRelativeProb * item.looseLootSpawnWeight), 1)
                                     })
                                 }
                             }
@@ -149,7 +151,7 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
                     try{
                         mapStaticLoot[lootContainer].itemDistribution.push({
                             "tpl": item.newId,
-                            "relativeProbability": 99999999
+                            "relativeProbability": probability
                         });
                     } catch (e){
                         this.logger.debug("Could not add " + item.newId + " to container " + lootContainer + " on map " + map)
@@ -164,4 +166,4 @@ class SampleTrader implements IPreSptLoadMod, IPostDBLoadMod
     }
 }
 
-module.exports = { mod: new SampleTrader() }
+module.exports = { mod: new HoodsEnergyDrinks() }
