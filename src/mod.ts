@@ -95,17 +95,17 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution[217])
         //console.log(tables.locations["bigmap"].staticLoot["5d6fd13186f77424ad2a8c69"].itemDistribution)
         
-        const items = tables.locations["bigmap"].staticLoot["5d6d2b5486f774785c2ba8ea"].itemDistribution
+        //const items = tables.locations["bigmap"].staticLoot["5d6d2b5486f774785c2ba8ea"].itemDistribution
         
-        for (const item in items) {
-            if (items[item].tpl == '5751435d24597720a27126d1') {
+        //for (const item in items) {
+            //if (items[item].tpl == '5751435d24597720a27126d1') {
                 //console.log(item)
-                console.log(items[item])
-            }
-        }
+                //console.log(items[item])
+            //}
+        //}
             
             
-
+        // Thanks to RainbowPC and his Lots Of Loot mod, based on his code inserting items into loose loot spawns
         for (const item of itemCreate.loot){
             const lootComposedKey = item.newId + '_composedkey';
             for(const map of maps) {
@@ -126,6 +126,7 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
                                             })
                                         }
                                     }
+                                    //console.log(Math.max(Math.round(originRelativeProb * item.looseLootSpawnWeight), 1))
                                     point.itemDistribution.push({
                                         composedKey: {
                                             key: lootComposedKey,

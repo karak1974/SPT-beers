@@ -28,42 +28,42 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 300,
+                    "Duration": 240,
                     "SkillName": "Endurance",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 300,
+                    "Duration": 240,
                     "SkillName": "Strength",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "StaminaRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 300,
+                    "Duration": 240,
                     "SkillName": "",
-                    "Value": 0.5
+                    "Value": 0.8
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "MaxStamina",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 300,
+                    "Duration": 240,
                     "SkillName": "",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
-                    "Delay": 300,
+                    "Delay": 240,
                     "Duration": 120,
                     "SkillName": "Health",
                     "Value": -10
@@ -72,7 +72,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 300,
+                    "Delay": 240,
                     "Duration": 40,
                     "SkillName": "",
                     "Value": -1
@@ -81,7 +81,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 300,
+                    "Delay": 240,
                     "Duration": 120,
                     "SkillName": "",
                     "Value": 0
@@ -94,48 +94,12 @@ export class ItemCreateHelper {
             blue_monster_buffs = [
                 {
                     "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Perception",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Intellect",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Attention",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Search",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
                     "BuffType": "StaminaRate",
                     "Chance": 1,
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "",
-                    "Value": 0.3
+                    "Value": 0.2
                 },
                 {
                     "AbsoluteValue": true,
@@ -144,7 +108,43 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "",
-                    "Value": 3
+                    "Value": 2
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "Perception",
+                    "Value": 10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "Intellect",
+                    "Value": 10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "Attention",
+                    "Value": 10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "Search",
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
@@ -185,6 +185,111 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
+                    "Duration": 360,
+                    "SkillName": "Endurance",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 360,
+                    "SkillName": "Strength",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "StaminaRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 360,
+                    "SkillName": "",
+                    "Value": 0.5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "MaxStamina",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 360,
+                    "SkillName": "",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 360,
+                    "SkillName": "Perception",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 360,
+                    "SkillName": "Attention",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 360,
+                    "SkillName": "Search",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 360,
+                    "Duration": 120,
+                    "SkillName": "Health",
+                    "Value": -10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 360,
+                    "Duration": 120,
+                    "SkillName": "Vitality",
+                    "Value": -10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "EnergyRate",
+                    "Chance": 1,
+                    "Delay": 360,
+                    "Duration": 50,
+                    "SkillName": "",
+                    "Value": -1
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "HandsTremor",
+                    "Chance": 1,
+                    "Delay": 360,
+                    "Duration": 120,
+                    "SkillName": "",
+                    "Value": 0
+                }
+            ]
+        }
+
+        let strawberry_monster_buffs: any = [];
+        if (this.config.config['monster_strawberry_effect_toggle']) {
+            strawberry_monster_buffs = [
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Endurance",
                     "Value": 5
@@ -218,93 +323,6 @@ export class ItemCreateHelper {
                 },
                 {
                     "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Perception",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Attention",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Search",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 50,
-                    "SkillName": "",
-                    "Value": -1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let strawberry_monster_buffs: any = [];
-        if (this.config.config['monster_strawberry_effect_toggle']) {
-            strawberry_monster_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Endurance",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Strength",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
                     "BuffType": "HealthRate",
                     "Chance": 1,
                     "Delay": 1,
@@ -319,7 +337,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Vitality",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
@@ -328,7 +346,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Health",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
@@ -337,7 +355,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "HeavyVests",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
@@ -346,7 +364,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "LightVests",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
@@ -355,6 +373,15 @@ export class ItemCreateHelper {
                     "Delay": 300,
                     "Duration": 120,
                     "SkillName": "Health",
+                    "Value": -10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 300,
+                    "Duration": 120,
+                    "SkillName": "Vitality",
                     "Value": -10
                 },
                 {
@@ -386,7 +413,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 360,
+                    "Duration": 400,
                     "SkillName": "Endurance",
                     "Value": 5
                 },
@@ -395,7 +422,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 360,
+                    "Duration": 400,
                     "SkillName": "Strength",
                     "Value": 5
                 },
@@ -404,16 +431,25 @@ export class ItemCreateHelper {
                     "BuffType": "StaminaRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 360,
+                    "Duration": 400,
                     "SkillName": "",
                     "Value": 0.5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "MaxStamina",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 400,
+                    "SkillName": "",
+                    "Value": 5
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 360,
+                    "Duration": 400,
                     "SkillName": "CovertMovement",
                     "Value": 15
                 },
@@ -422,7 +458,7 @@ export class ItemCreateHelper {
                     "BuffType": "WeightLimit",
                     "Chance": 1,
                     "Delay": 1,
-                    "Duration": 360,
+                    "Duration": 400,
                     "SkillName": "",
                     "Value": 0.20
                   },
@@ -430,16 +466,25 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 240,
+                    "Delay": 400,
+                    "Duration": 120,
                     "SkillName": "Health",
+                    "Value": -10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 400,
+                    "Duration": 120,
+                    "SkillName": "Vitality",
                     "Value": -10
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 360,
+                    "Delay": 400,
                     "Duration": 50,
                     "SkillName": "",
                     "Value": -1
@@ -448,7 +493,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 360,
+                    "Delay": 400,
                     "Duration": 120,
                     "SkillName": "",
                     "Value": 0
@@ -562,7 +607,16 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "",
-                    "Value": 0.5
+                    "Value": 0.4
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "MaxStamina",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
+                    "Value": 4
                 },
                 {
                     "AbsoluteValue": true,
@@ -571,7 +625,7 @@ export class ItemCreateHelper {
                     "Delay": 1,
                     "Duration": 300,
                     "SkillName": "",
-                    "Value": 0.25
+                    "Value": 0.8
                 },
                 {
                     "AbsoluteValue": true,
@@ -662,12 +716,30 @@ export class ItemCreateHelper {
                 },
                 {
                     "AbsoluteValue": true,
+                    "BuffType": "StaminaRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
+                    "Value": 0.5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "MaxStamina",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "HeavyVests",
-                    "Value": 15
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
@@ -676,7 +748,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "LightVests",
-                    "Value": 15
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": false,
@@ -710,9 +782,9 @@ export class ItemCreateHelper {
                     "BuffType": "EnergyRate",
                     "Chance": 1,
                     "Delay": 300,
-                    "Duration": 50,
+                    "Duration": 60,
                     "SkillName": "",
-                    "Value": -1
+                    "Value": -1.2
                 },
                 {
                     "AbsoluteValue": true,
@@ -745,6 +817,24 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "Strength",
+                    "Value": 5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "StaminaRate",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
+                    "Value": 0.5
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "MaxStamina",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 300,
+                    "SkillName": "",
                     "Value": 5
                 },
                 {
@@ -815,9 +905,9 @@ export class ItemCreateHelper {
                     "BuffType": "EnergyRate",
                     "Chance": 1,
                     "Delay": 300,
-                    "Duration": 50,
+                    "Duration": 60,
                     "SkillName": "",
-                    "Value": -1
+                    "Value": -1.2
                 },
                 {
                     "AbsoluteValue": true,
@@ -839,7 +929,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 360,
                     "SkillName": "Endurance",
                     "Value": 30
                 },
@@ -848,7 +938,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 360,
                     "SkillName": "Strength",
                     "Value": 30
                 },
@@ -857,15 +947,24 @@ export class ItemCreateHelper {
                     "BuffType": "StaminaRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 360,
                     "SkillName": "",
                     "Value": 2
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "MaxStamina",
+                    "Chance": 1,
+                    "Delay": 0,
+                    "Duration": 360,
+                    "SkillName": "",
+                    "Value": 20
                 },
                 {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 360,
                     "AbsoluteValue": true,
                     "SkillName": "StressResistance",
                     "Value": 30,
@@ -875,7 +974,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 360,
                     "SkillName": "HeavyVests",
                     "Value": 30
                 },
@@ -884,7 +983,7 @@ export class ItemCreateHelper {
                     "BuffType": "SkillRate",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 360,
                     "SkillName": "LightVests",
                     "Value": 30
                 },
@@ -893,7 +992,7 @@ export class ItemCreateHelper {
                     "BuffType": "DamageModifier",
                     "Chance": 1,
                     "Delay": 0,
-                    "Duration": 240,
+                    "Duration": 360,
                     "SkillName": "",
                     "Value": -0.15
                   },
@@ -902,24 +1001,42 @@ export class ItemCreateHelper {
                     "BuffType": "HealthRate",
                     "Chance": 1,
                     "Delay": 1,
-                    "Duration": 240,
+                    "Duration": 360,
                     "SkillName": "",
                     "Value": 1.5
                   },
                   {
                     "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 360,
+                    "Duration": 120,
+                    "SkillName": "Health",
+                    "Value": -10
+                },
+                {
+                    "AbsoluteValue": true,
+                    "BuffType": "SkillRate",
+                    "Chance": 1,
+                    "Delay": 360,
+                    "Duration": 120,
+                    "SkillName": "Vitality",
+                    "Value": -10
+                },
+                  {
+                    "AbsoluteValue": true,
                     "BuffType": "EnergyRate",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 360,
                     "Duration": 60,
                     "SkillName": "",
-                    "Value": -1.2
+                    "Value": -2.0
                 },
                 {
                     "AbsoluteValue": true,
                     "BuffType": "HandsTremor",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 360,
                     "Duration": 120,
                     "SkillName": "",
                     "Value": 0
@@ -928,7 +1045,7 @@ export class ItemCreateHelper {
                     "AbsoluteValue": true,
                     "BuffType": "QuantumTunnelling",
                     "Chance": 1,
-                    "Delay": 240,
+                    "Delay": 360,
                     "Duration": 60,
                     "SkillName": "",
                     "Value": 0
@@ -975,9 +1092,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "a_monster_energy", 
-            fleaPriceRoubles: 85000,
-            handbookPriceRoubles: 70000,
+            newId: "66ccf66fc9162d12270bb161", 
+            fleaPriceRoubles: this.config.config['monster_green_flea_price'],
+            handbookPriceRoubles: 50000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -987,11 +1104,11 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 400, // vodka 493 // energy drink 842
+                "578f87a3245977356274f2cb": 300, // vodka 493 // energy drink 842
                 "5909e4b686f7747f5b744fa4": 200, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 500, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 250, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 250, // vodka 171 // energy drink 328
+                "578f8778245977358849a9b5": 300, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 200, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 200, // vodka 171 // energy drink 328
             },
             looseLootSpawnWeight: 0.6
         }
@@ -1024,9 +1141,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "b_monster_energy_blue", 
-            fleaPriceRoubles: 85000,
-            handbookPriceRoubles: 70000,
+            newId: "66ccf66fc9162d12270bb160", 
+            fleaPriceRoubles: this.config.config['monster_blue_flea_price'],
+            handbookPriceRoubles: 40000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1036,9 +1153,9 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 400, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 200, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 500, // vodka 0 // energy drink 2873
+                "578f87a3245977356274f2cb": 350, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 250, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 350, // vodka 0 // energy drink 2873
                 "5d6fd13186f77424ad2a8c69": 250, // vodka 0 // energy drink 0
                 "5d6d2b5486f774785c2ba8ea": 250, // vodka 171 // energy drink 328
             },
@@ -1073,9 +1190,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "c_monster_energy_white", 
-            fleaPriceRoubles: 95000,
-            handbookPriceRoubles: 85000,
+            newId: "66ccf66fc9162d12270bb162", 
+            fleaPriceRoubles: this.config.config['monster_white_flea_price'],
+            handbookPriceRoubles: 55000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1085,11 +1202,11 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 350, // vodka 493 // energy drink 842
+                "578f87a3245977356274f2cb": 275, // vodka 493 // energy drink 842
                 "5909e4b686f7747f5b744fa4": 175, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 500, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 200, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 200, // vodka 171 // energy drink 328
+                "578f8778245977358849a9b5": 275, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 175, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 175, // vodka 171 // energy drink 328
             },
             looseLootSpawnWeight: 0.45
         }
@@ -1111,10 +1228,10 @@ export class ItemCreateHelper {
                 StimulatorBuffs: "Buffs_drink_monster_strawberry_energy",
                 effects_health: {
                     Hydration: {
-                        value: 30
+                        value: 40
                     },
                     Energy: {
-                        value: 60
+                        value: 80
                     }
                 },
                 effects_damage: {
@@ -1122,9 +1239,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "d_monster_energy_strawberry", 
-            fleaPriceRoubles: 100000,
-            handbookPriceRoubles: 80000,
+            newId: "66ccf66fc9162d12270bb163", 
+            fleaPriceRoubles: this.config.config['monster_strawberry_flea_price'],
+            handbookPriceRoubles: 62500,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1160,10 +1277,10 @@ export class ItemCreateHelper {
                 StimulatorBuffs: "Buffs_drink_ghost_energy",
                 effects_health: {
                     Hydration: {
-                        value: 30
+                        value: 40
                     },
                     Energy: {
-                        value: 60
+                        value: 80
                     }
                 },
                 effects_damage: {
@@ -1171,9 +1288,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "e_ghost_energy", 
-            fleaPriceRoubles: 140000,
-            handbookPriceRoubles: 100000,
+            newId: "66ccf66fc9162d12270bb174", 
+            fleaPriceRoubles: this.config.config['ghost_flea_price'],
+            handbookPriceRoubles: 65000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1209,10 +1326,10 @@ export class ItemCreateHelper {
                 StimulatorBuffs: "Buffs_drink_nos_energy",
                 effects_health: {
                     Hydration: {
-                        value: 30
+                        value: 40
                     },
                     Energy: {
-                        value: 60
+                        value: 80
                     }
                 },
                 effects_damage: {
@@ -1220,9 +1337,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "f_nos_energy", 
-            fleaPriceRoubles: 140000,
-            handbookPriceRoubles: 100000,
+            newId: "66ccf66fc9162d12270bb175", 
+            fleaPriceRoubles: this.config.config['nos_flea_price'],
+            handbookPriceRoubles: 70000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1235,7 +1352,7 @@ export class ItemCreateHelper {
                 "578f87a3245977356274f2cb": 200, // vodka 493 // energy drink 842
                 "5909e4b686f7747f5b744fa4": 150, // vodka 193 // energy drink 329
                 "578f8778245977358849a9b5": 200, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 100, // vodka 0 // energy drink 0
+                "5d6fd13186f77424ad2a8c69": 125, // vodka 0 // energy drink 0
                 "5d6d2b5486f774785c2ba8ea": 150, // vodka 171 // energy drink 328
             },
             looseLootSpawnWeight: 0.3
@@ -1258,10 +1375,10 @@ export class ItemCreateHelper {
                 StimulatorBuffs: "Buffs_drink_monster_punch_energy",
                 effects_health: {
                     Hydration: {
-                        value: 30
+                        value: 40
                     },
                     Energy: {
-                        value: 60
+                        value: 80
                     }
                 },
                 effects_damage: {
@@ -1269,9 +1386,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "g_monster_energy_punch", 
-            fleaPriceRoubles: 150000,
-            handbookPriceRoubles: 120000,
+            newId: "66ccf66fc9162d12270bb176", 
+            fleaPriceRoubles: this.config.config['monster_punch_flea_price'],
+            handbookPriceRoubles: 100000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1284,10 +1401,10 @@ export class ItemCreateHelper {
                 "578f87a3245977356274f2cb": 150, // vodka 493 // energy drink 842
                 "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
                 "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 100, // vodka 0 // energy drink 0
+                "5d6fd13186f77424ad2a8c69": 125, // vodka 0 // energy drink 0
                 "5d6d2b5486f774785c2ba8ea": 125, // vodka 171 // energy drink 328
             },
-            looseLootSpawnWeight: 0.2
+            looseLootSpawnWeight: 0.25
         }
 
         this.loot.push(monester_energy_punch);
@@ -1307,10 +1424,10 @@ export class ItemCreateHelper {
                 StimulatorBuffs: "Buffs_drink_bang_energy",
                 effects_health: {
                     Hydration: {
-                        value: 30
+                        value: 40
                     },
                     Energy: {
-                        value: 60
+                        value: 80
                     }
                 },
                 effects_damage: {
@@ -1318,9 +1435,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "h_bang_energy", 
-            fleaPriceRoubles: 150000,
-            handbookPriceRoubles: 120000,
+            newId: "66ccf66fc9162d12270bb177", 
+            fleaPriceRoubles: this.config.config['bang_flea_price'],
+            handbookPriceRoubles: 105000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1331,12 +1448,12 @@ export class ItemCreateHelper {
             },
             addToStaticLoot: {
                 "578f87a3245977356274f2cb": 125, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 125, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 125, // vodka 171 // energy drink 328
+                "5909e4b686f7747f5b744fa4": 110, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 110, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 110, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 110, // vodka 171 // energy drink 328
             },
-            looseLootSpawnWeight: 0.15
+            looseLootSpawnWeight: 0.2
         }
 
         this.loot.push(bang_energy);
@@ -1356,10 +1473,10 @@ export class ItemCreateHelper {
                 StimulatorBuffs: "Buffs_drink_monster_doctor_energy",
                 effects_health: {
                     Hydration: {
-                        value: 30
+                        value: 40
                     },
                     Energy: {
-                        value: 60
+                        value: 80
                     }
                 },
                 effects_damage: {
@@ -1367,9 +1484,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "i_monster_energy_doctor", 
-            fleaPriceRoubles: 170000,
-            handbookPriceRoubles: 140000,
+            newId: "66ccf66fc9162d12270bb178", 
+            fleaPriceRoubles: this.config.config['monster_doctor_flea_price'],
+            handbookPriceRoubles: 115000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1379,13 +1496,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 100, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 100, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 100, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": 90, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 90, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 90, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 90, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 90, // vodka 171 // energy drink 328
             },
-            looseLootSpawnWeight: 0.1
+            looseLootSpawnWeight: 0.15
         }
 
         this.loot.push(monester_energy_doctor);
@@ -1405,10 +1522,10 @@ export class ItemCreateHelper {
                 StimulatorBuffs: "Buffs_drink_monster_lemonade_energy",
                 effects_health: {
                     Hydration: {
-                        value: 30
+                        value: 60
                     },
                     Energy: {
-                        value: 60
+                        value: 100
                     }
                 },
                 effects_damage: {
@@ -1416,9 +1533,9 @@ export class ItemCreateHelper {
                 }
             },
             parentId: "5448e8d64bdc2dce718b4568",
-            newId: "j_monster_energy_lemonade", 
-            fleaPriceRoubles: 180000,
-            handbookPriceRoubles: 160000,
+            newId: "66ccf66fc9162d12270bb179", 
+            fleaPriceRoubles: this.config.config['monster_lemonade_flea_price'],
+            handbookPriceRoubles: 135000,
             handbookParentId: "5b5f6fa186f77409407a7eb7",
             locales: {
                 "en": {
@@ -1428,13 +1545,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 100, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 100, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 100, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": 70, // vodka 493 // energy drink 842
+                "5909e4b686f7747f5b744fa4": 70, // vodka 193 // energy drink 329
+                "578f8778245977358849a9b5": 70, // vodka 0 // energy drink 2873
+                "5d6fd13186f77424ad2a8c69": 70, // vodka 0 // energy drink 0
+                "5d6d2b5486f774785c2ba8ea": 70, // vodka 171 // energy drink 328
             },
-            looseLootSpawnWeight: 0.1
+            looseLootSpawnWeight: 0.15
         }
 
         this.loot.push(monester_energy_lemonade);
