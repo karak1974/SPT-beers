@@ -1296,7 +1296,7 @@ export class ItemCreateHelper {
                 "en": {
                     name: "Ghost Strawbango Margarita Energy Drink",
                     shortName: "Ghost",
-                    description: `test`
+                    description: `Ghost Energy is the fully transparent, fully loaded energy drink we have all been waiting for. Our legendary energy drink features no sugar, no artificial colors, and authentic Strawbango Margarita flavor. It contains 200mg of Natural Caffeine from coffee beans, which has been found anecdotally to deliver a smooth, feel-good energy with less jitters and no crash when compared to other forms of caffeine.`
                 }
             },
             addToStaticLoot: {
