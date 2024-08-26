@@ -33,10 +33,6 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
         this.mod = "Hoods Energy Drinks";
     }
 
-    /**
-     * Some work needs to be done prior to SPT code being loaded, registering the profile image + setting trader update time inside the trader config json
-     * @param container Dependency container
-     */
     public preSptLoad(container: DependencyContainer): void {
         // Get a logger
         this.logger = container.resolve<ILogger>("WinstonLogger");
@@ -54,10 +50,6 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
 
     }
     
-    /**
-     * Majority of trader-related work occurs after the aki database has been loaded but prior to SPT code being run
-     * @param container Dependency container
-     */
     public postDBLoad(container: DependencyContainer): void {
         this.logger.debug(`[${this.mod}] postDb Loading... `);
 
@@ -142,7 +134,6 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
         }
         
         //console.log(tables.locations["bigmap"].staticLoot["578f87a3245977356274f2cb"].itemDistribution) // Drawer
-        // Currently this adds poker chips to many static loot containers on all maps
         for (const item of itemCreate.loot){
             for(const map of maps){
                 const mapStaticLoot = tables.locations[map].staticLoot;

@@ -721,7 +721,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "",
-                    "Value": 0.5
+                    "Value": 1
                 },
                 {
                     "AbsoluteValue": true,
@@ -730,7 +730,7 @@ export class ItemCreateHelper {
                     "Delay": 0,
                     "Duration": 300,
                     "SkillName": "",
-                    "Value": 5
+                    "Value": 10
                 },
                 {
                     "AbsoluteValue": true,
