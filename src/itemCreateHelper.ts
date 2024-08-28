@@ -538,7 +538,7 @@ export class ItemCreateHelper {
         this.loot.push(monester_energy_lemonade);
 
         const redbull_energy: NewItemFromCloneDetails = {
-            itemTplToClone: "5d40407c86f774318526545a",
+            itemTplToClone: "5751496424597720a27126da",
             overrideProperties: {
                 Prefab: {
                     path: "assets/redbull_energy.bundle",
@@ -587,7 +587,7 @@ export class ItemCreateHelper {
         this.loot.push(redbull_energy);
 
         const redbull_watermelon_energy: NewItemFromCloneDetails = {
-            itemTplToClone: "5d40407c86f774318526545a",
+            itemTplToClone: "5751496424597720a27126da",
             overrideProperties: {
                 Prefab: {
                     path: "assets/redbull_watermelon_energy.bundle",
