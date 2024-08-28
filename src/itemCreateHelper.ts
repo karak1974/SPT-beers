@@ -5,6 +5,7 @@ import { DatabaseServer } from "@spt/servers/DatabaseServer";
 import { VFS } from "@spt/utils/VFS";
 import { jsonc } from "jsonc";
 import path from "path";
+import { Buffs } from "./buffs";
 
 export class ItemCreateHelper {
 
@@ -15,1044 +16,22 @@ export class ItemCreateHelper {
     public createItems(container: DependencyContainer) {
         const db: DatabaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const vfs = container.resolve<VFS>("VFS");
-        this.config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc")))
-
-        // Resolve the CustomItemService container
+        this.config = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config/config.jsonc"))).config;
         const customItem = container.resolve<CustomItemService>("CustomItemService");
 
-        let green_monster_buffs: any = [];
-        if (this.config.config['monster_green_effect_toggle']) {
-            green_monster_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "Endurance",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "Strength",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "",
-                    "Value": 0.8
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 40,
-                    "SkillName": "",
-                    "Value": -1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let blue_monster_buffs: any = [];
-        if (this.config.config['monster_blue_effect_toggle']) {
-            blue_monster_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 0.2
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 2
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Perception",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Intellect",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Attention",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Search",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 40,
-                    "SkillName": "",
-                    "Value": -1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let white_monster_buffs: any = [];
-        if(this.config.config['monster_white_effect_toggle']) {
-
-            white_monster_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "Endurance",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "Strength",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "",
-                    "Value": 0.5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "Perception",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "Attention",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "Search",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 50,
-                    "SkillName": "",
-                    "Value": -1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let strawberry_monster_buffs: any = [];
-        if (this.config.config['monster_strawberry_effect_toggle']) {
-            strawberry_monster_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Endurance",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Strength",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 0.2
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 2
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HealthRate",
-                    "Chance": 1,
-                    "Delay": 1,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 0.5
-                  },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Vitality",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Health",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "HeavyVests",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "LightVests",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 50,
-                    "SkillName": "",
-                    "Value": -1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let ghost_energy_buffs: any = [];
-        if (this.config.config['ghost_effect_toggle']) {
-            ghost_energy_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 400,
-                    "SkillName": "Endurance",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 400,
-                    "SkillName": "Strength",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 400,
-                    "SkillName": "",
-                    "Value": 0.5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 400,
-                    "SkillName": "",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 400,
-                    "SkillName": "CovertMovement",
-                    "Value": 15
-                },
-                {
-                    "AbsoluteValue": false,
-                    "BuffType": "WeightLimit",
-                    "Chance": 1,
-                    "Delay": 1,
-                    "Duration": 400,
-                    "SkillName": "",
-                    "Value": 0.20
-                  },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 400,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 400,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 400,
-                    "Duration": 50,
-                    "SkillName": "",
-                    "Value": -1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 400,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let nos_energy_buffs: any = [];
-        if (this.config.config['nos_effect_toggle']) {
-            nos_energy_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "Endurance",
-                    "Value": 20
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "Strength",
-                    "Value": 20
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "",
-                    "Value": 1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 240,
-                    "SkillName": "",
-                    "Value": 20
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -15
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -15
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 60,
-                    "SkillName": "",
-                    "Value": -1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let punch_monster_buffs: any = [];
-        if (this.config.config['monster_punch_effect_toggle']) {
-            punch_monster_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Endurance",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Strength",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 0.4
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 4
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HealthRate",
-                    "Chance": 1,
-                    "Delay": 1,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 0.8
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Perception",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Intellect",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Attention",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Search",
-                    "Value": 10
-                },
-                  {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -15
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 40,
-                    "SkillName": "",
-                    "Value": -1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 180,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let bang_energy_buffs: any = [];
-        if (this.config.config['bang_effect_toggle']) {
-            bang_energy_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Endurance",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Strength",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 1
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "HeavyVests",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "LightVests",
-                    "Value": 10
-                },
-                {
-                    "AbsoluteValue": false,
-                    "BuffType": "DamageModifier",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": -0.1
-                  },
-                  {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                  {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 60,
-                    "SkillName": "",
-                    "Value": -1.2
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let doctor_buffs: any = [];
-        if (this.config.config['monster_doctor_effect_toggle']) {
-            doctor_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Endurance",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Strength",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 0.5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 5
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HealthRate",
-                    "Chance": 1,
-                    "Delay": 1,
-                    "Duration": 300,
-                    "SkillName": "",
-                    "Value": 1.5
-                  },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Vitality",
-                    "Value": 20
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Health",
-                    "Value": 20
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "SkillName": "Immunity",
-                    "Value": 20
-                },
-                {
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 300,
-                    "AbsoluteValue": true,
-                    "SkillName": "StressResistance",
-                    "Value": 20,
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 240,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 60,
-                    "SkillName": "",
-                    "Value": -1.2
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 300,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
-        let lemonade_monster_buffs: any = [];
-        if (this.config.config['monster_lemonade_effect_toggle']) {
-            lemonade_monster_buffs = [
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "Endurance",
-                    "Value": 30
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "Strength",
-                    "Value": 30
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "StaminaRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "",
-                    "Value": 2
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "MaxStamina",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "",
-                    "Value": 20
-                },
-                {
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "AbsoluteValue": true,
-                    "SkillName": "StressResistance",
-                    "Value": 30,
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "HeavyVests",
-                    "Value": 30
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "LightVests",
-                    "Value": 30
-                },
-                {
-                    "AbsoluteValue": false,
-                    "BuffType": "DamageModifier",
-                    "Chance": 1,
-                    "Delay": 0,
-                    "Duration": 360,
-                    "SkillName": "",
-                    "Value": -0.15
-                  },
-                  {
-                    "AbsoluteValue": true,
-                    "BuffType": "HealthRate",
-                    "Chance": 1,
-                    "Delay": 1,
-                    "Duration": 360,
-                    "SkillName": "",
-                    "Value": 1.5
-                  },
-                  {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 120,
-                    "SkillName": "Health",
-                    "Value": -10
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "SkillRate",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 120,
-                    "SkillName": "Vitality",
-                    "Value": -10
-                },
-                  {
-                    "AbsoluteValue": true,
-                    "BuffType": "EnergyRate",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 60,
-                    "SkillName": "",
-                    "Value": -2.0
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "HandsTremor",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 120,
-                    "SkillName": "",
-                    "Value": 0
-                },
-                {
-                    "AbsoluteValue": true,
-                    "BuffType": "QuantumTunnelling",
-                    "Chance": 1,
-                    "Delay": 360,
-                    "Duration": 60,
-                    "SkillName": "",
-                    "Value": 0
-                }
-            ]
-        }
-
+        const buffs = new Buffs();
+        let green_monster_buffs: Array<any> = this.config['monster_green_effect_toggle'] ? buffs.green_monster_buffs : [];
+        let blue_monster_buffs: Array<any> = this.config['monster_blue_effect_toggle'] ? buffs.blue_monster_buffs : [];
+        let white_monster_buffs: Array<any> = this.config['monster_white_effect_toggle'] ? buffs.white_monster_buffs : [];
+        let strawberry_monster_buffs: Array<any> = this.config['monster_strawberry_effect_toggle'] ? buffs.strawberry_monster_buffs : [];
+        let ghost_energy_buffs: Array<any> = this.config['ghost_effect_toggle'] ? buffs.ghost_energy_buffs : [];
+        let nos_energy_buffs: Array<any> = this.config['nos_effect_toggle'] ? buffs.nos_energy_buffs : [];
+        let punch_monster_buffs: Array<any> = this.config['monster_punch_effect_toggle'] ? buffs.punch_monster_buffs : [];
+        let bang_energy_buffs: Array<any> = this.config['bang_effect_toggle'] ? buffs.bang_energy_buffs : [];
+        let doctor_buffs: Array<any> = this.config['monster_doctor_effect_toggle'] ? buffs.doctor_buffs : [];
+        let lemonade_monster_buffs: Array<any> = this.config['monster_lemonade_effect_toggle'] ? buffs.lemonade_monster_buffs : [];
+        let redbull_original_buffs: Array<any> = this.config['redbull_effect_toggle'] ? buffs.redbull_original_buffs : [];
+        let redbull_watermelon_buffs: Array<any> = this.config['redbull_watermelon_effect_toggle'] ? buffs.redbull_watermelon_buffs : [];
 
         // Add the custom buff to globals config
         db.tableData.globals.config.Health.Effects.Stimulator.Buffs["Buffs_drink_monster_energy"] = green_monster_buffs;
@@ -1065,6 +44,8 @@ export class ItemCreateHelper {
         db.tableData.globals.config.Health.Effects.Stimulator.Buffs["Buffs_drink_bang_energy"] = bang_energy_buffs;
         db.tableData.globals.config.Health.Effects.Stimulator.Buffs["Buffs_drink_monster_doctor_energy"] = doctor_buffs;
         db.tableData.globals.config.Health.Effects.Stimulator.Buffs["Buffs_drink_monster_punch_energy"] = punch_monster_buffs;
+        db.tableData.globals.config.Health.Effects.Stimulator.Buffs["Buffs_drink_redbull_original_energy"] = redbull_original_buffs;
+        db.tableData.globals.config.Health.Effects.Stimulator.Buffs["Buffs_drink_redbull_watermelon_energy"] = redbull_watermelon_buffs;
 
         const monester_energy: NewItemFromCloneDetails = {
             itemTplToClone: "5d40407c86f774318526545a",
@@ -1093,9 +74,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb161", 
-            fleaPriceRoubles: this.config.config['monster_green_flea_price'],
+            fleaPriceRoubles: this.config['monster_green_flea_price'],
             handbookPriceRoubles: 50000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Monster Original Green Energy Drink",
@@ -1104,13 +85,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 300, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 200, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 300, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 200, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 200, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["monster_green_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["monster_green_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["monster_green_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["monster_green_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["monster_green_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.6
+            looseLootSpawnWeight: this.config["monster_green_loot_loot_weight"]
         }
 
         this.loot.push(monester_energy);
@@ -1142,9 +123,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb160", 
-            fleaPriceRoubles: this.config.config['monster_blue_flea_price'],
+            fleaPriceRoubles: this.config['monster_blue_flea_price'],
             handbookPriceRoubles: 40000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Monster Original Lo-Carb Energy Drink",
@@ -1153,13 +134,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 350, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 250, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 350, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 250, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 250, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["monster_blue_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["monster_blue_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["monster_blue_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["monster_blue_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["monster_blue_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.6
+            looseLootSpawnWeight: this.config["monster_blue_loot_loot_weight"]
         }
 
         this.loot.push(monester_energy_blue);
@@ -1191,9 +172,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb162", 
-            fleaPriceRoubles: this.config.config['monster_white_flea_price'],
+            fleaPriceRoubles: this.config['monster_white_flea_price'],
             handbookPriceRoubles: 55000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Monster Zero Ultra Energy Drink",
@@ -1202,13 +183,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 275, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 175, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 275, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 175, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 175, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["monster_white_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["monster_white_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["monster_white_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["monster_white_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["monster_white_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.45
+            looseLootSpawnWeight: this.config["monster_white_loot_loot_weight"]
         }
 
         this.loot.push(monester_energy_white);
@@ -1240,9 +221,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb163", 
-            fleaPriceRoubles: this.config.config['monster_strawberry_flea_price'],
+            fleaPriceRoubles: this.config['monster_strawberry_flea_price'],
             handbookPriceRoubles: 62500,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Monster Zero-Ultra Strawberry Dreams Energy Drink",
@@ -1251,13 +232,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 250, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 150, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 200, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 150, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 150, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["monster_strawberry_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["monster_strawberry_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["monster_strawberry_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["monster_strawberry_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["monster_strawberry_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.3
+            looseLootSpawnWeight: this.config["monster_strawberry_loot_loot_weight"]
         }
 
         this.loot.push(monester_energy_strawberry);
@@ -1289,9 +270,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb174", 
-            fleaPriceRoubles: this.config.config['ghost_flea_price'],
+            fleaPriceRoubles: this.config['ghost_flea_price'],
             handbookPriceRoubles: 65000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Ghost Strawbango Margarita Energy Drink",
@@ -1300,13 +281,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 250, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 150, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 200, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 150, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 150, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["ghost_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["ghost_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["ghost_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["ghost_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["ghost_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.3
+            looseLootSpawnWeight: this.config["ghost_loot_loot_weight"]
         }
 
         this.loot.push(ghost_energy);
@@ -1338,9 +319,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb175", 
-            fleaPriceRoubles: this.config.config['nos_flea_price'],
+            fleaPriceRoubles: this.config['nos_flea_price'],
             handbookPriceRoubles: 70000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "NOS Original Energy Drink",
@@ -1349,13 +330,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 200, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 150, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 200, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 125, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 150, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["nos_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["nos_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["nos_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["nos_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["nos_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.3
+            looseLootSpawnWeight: this.config["nos_loot_loot_weight"]
         }
 
         this.loot.push(nos_energy);
@@ -1387,9 +368,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb176", 
-            fleaPriceRoubles: this.config.config['monster_punch_flea_price'],
+            fleaPriceRoubles: this.config['monster_punch_flea_price'],
             handbookPriceRoubles: 100000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Monster Juice Pipeline Punch Energy Drink",
@@ -1398,13 +379,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 150, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 100, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 100, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 125, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 125, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["monster_punch_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["monster_punch_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["monster_punch_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["monster_punch_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["monster_punch_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.25
+            looseLootSpawnWeight: this.config["monster_punch_loot_loot_weight"]
         }
 
         this.loot.push(monester_energy_punch);
@@ -1436,9 +417,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb177", 
-            fleaPriceRoubles: this.config.config['bang_flea_price'],
+            fleaPriceRoubles: this.config['bang_flea_price'],
             handbookPriceRoubles: 105000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Bang Rainbow Unicorn Energy Drink",
@@ -1447,13 +428,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 125, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 110, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 110, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 110, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 110, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["bang_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["bang_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["bang_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["bang_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["bang_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.2
+            looseLootSpawnWeight: this.config["bang_loot_loot_loot_weight"]
         }
 
         this.loot.push(bang_energy);
@@ -1485,9 +466,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb178", 
-            fleaPriceRoubles: this.config.config['monster_doctor_flea_price'],
+            fleaPriceRoubles: this.config['monster_doctor_flea_price'],
             handbookPriceRoubles: 115000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Monster The Doctor Energy Drink",
@@ -1496,13 +477,13 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 90, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 90, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 90, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 90, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 90, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["monster_doctor_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["monster_doctor_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["monster_doctor_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["monster_doctor_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["monster_doctor_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.15
+            looseLootSpawnWeight: this.config["monster_doctor_loot_loot_weight"]
         }
 
         this.loot.push(monester_energy_doctor);
@@ -1534,9 +515,9 @@ export class ItemCreateHelper {
             },
             parentId: "5448e8d64bdc2dce718b4568",
             newId: "66ccf66fc9162d12270bb179", 
-            fleaPriceRoubles: this.config.config['monster_lemonade_flea_price'],
+            fleaPriceRoubles: this.config['monster_lemonade_flea_price'],
             handbookPriceRoubles: 135000,
-            handbookParentId: "5b5f6fa186f77409407a7eb7",
+            handbookParentId: "5b47574386f77428ca22b335",
             locales: {
                 "en": {
                     name: "Monster Juice Aussie Lemonade Energy Drink",
@@ -1545,16 +526,114 @@ export class ItemCreateHelper {
                 }
             },
             addToStaticLoot: {
-                "578f87a3245977356274f2cb": 70, // vodka 493 // energy drink 842
-                "5909e4b686f7747f5b744fa4": 70, // vodka 193 // energy drink 329
-                "578f8778245977358849a9b5": 70, // vodka 0 // energy drink 2873
-                "5d6fd13186f77424ad2a8c69": 70, // vodka 0 // energy drink 0
-                "5d6d2b5486f774785c2ba8ea": 70, // vodka 171 // energy drink 328
+                "578f87a3245977356274f2cb": this.config["monster_lemonade_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["monster_lemonade_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["monster_lemonade_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["monster_lemonade_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["monster_lemonade_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: 0.15
+            looseLootSpawnWeight: this.config["monster_lemonade_loot_loot_weight"]
         }
 
         this.loot.push(monester_energy_lemonade);
+
+        const redbull_energy: NewItemFromCloneDetails = {
+            itemTplToClone: "5d40407c86f774318526545a",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/redbull_energy.bundle",
+                    rcid: ""
+                },
+                UsePrefab: {
+                    path: "assets/redbull_energy_container.bundle",
+                    rcid: ""
+                },
+                foodUseTime: 5,
+                StimulatorBuffs: "Buffs_drink_redbull_original_energy",
+                effects_health: {
+                    Hydration: {
+                        value: 30
+                    },
+                    Energy: {
+                        value: 60
+                    }
+                },
+                effects_damage: {
+                    
+                }
+            },
+            parentId: "5448e8d64bdc2dce718b4568",
+            newId: "66ccf66fc9162d12270bb180", 
+            fleaPriceRoubles: this.config['redbull_flea_price'],
+            handbookPriceRoubles: 65000,
+            handbookParentId: "5b47574386f77428ca22b335",
+            locales: {
+                "en": {
+                    name: "Red Bull Energy Drink",
+                    shortName: "Red Bull",
+                    description: `Red Bull Energy Drink gives you Wiiings whenever you need them. Red Bull is a lightly carbonated energy drink with an impeccable blend of caffeine, taurine, B vitamins, real sugar and water. With 110 calories per 8.4 fl oz can, Red Bull is great for any occasion. While aiming for great heights during your workday, in your workouts or when gaming, why not crack open a refreshing can of Red Bull?.`
+                }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": this.config["redbull_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["redbull_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["redbull_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["redbull_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["redbull_loot_ground_cache_weight"],
+            },
+            looseLootSpawnWeight: this.config["redbull_loot_loot_weight"]
+        }
+
+        this.loot.push(redbull_energy);
+
+        const redbull_watermelon_energy: NewItemFromCloneDetails = {
+            itemTplToClone: "5d40407c86f774318526545a",
+            overrideProperties: {
+                Prefab: {
+                    path: "assets/redbull_watermelon_energy.bundle",
+                    rcid: ""
+                },
+                UsePrefab: {
+                    path: "assets/redbull_watermelon_energy_container.bundle",
+                    rcid: ""
+                },
+                foodUseTime: 5,
+                StimulatorBuffs: "Buffs_drink_redbull_watermelon_energy",
+                effects_health: {
+                    Hydration: {
+                        value: 40
+                    },
+                    Energy: {
+                        value: 80
+                    }
+                },
+                effects_damage: {
+                    
+                }
+            },
+            parentId: "5448e8d64bdc2dce718b4568",
+            newId: "66ccf66fc9162d12270bb181", 
+            fleaPriceRoubles: this.config['redbull_watermelon_flea_price'],
+            handbookPriceRoubles: 95000,
+            handbookParentId: "5b47574386f77428ca22b335",
+            locales: {
+                "en": {
+                    name: "Red Bull Red Edition Watermelon Energy Drink",
+                    shortName: "Red Bull",
+                    description: `Red Bull Red Edition Watermelon Energy Drink gives you Wiiings whenever you need them. Red Bull Red Edition is a lightly carbonated energy drink with a blend of caffeine, taurine, B vitamins, real sugar and water, along with the taste of watermelon.`
+                }
+            },
+            addToStaticLoot: {
+                "578f87a3245977356274f2cb": this.config["redbull_watermelon_loot_duffle_bag_weight"],
+                "5909e4b686f7747f5b744fa4": this.config["redbull_watermelon_loot_dead_scav_weight"],
+                "578f8778245977358849a9b5": this.config["redbull_watermelon_loot_jacket_weight"],
+                "5d6fd13186f77424ad2a8c69": this.config["redbull_watermelon_loot_ration_supply_crate_weight"],
+                "5d6d2b5486f774785c2ba8ea": this.config["redbull_watermelon_loot_ground_cache_weight"],
+            },
+            looseLootSpawnWeight: this.config["redbull_watermelon_loot_loot_weight"]
+        }
+
+        this.loot.push(redbull_watermelon_energy);
 
         
         customItem.createItemFromClone(monester_energy);
@@ -1567,5 +646,7 @@ export class ItemCreateHelper {
         customItem.createItemFromClone(nos_energy);
         customItem.createItemFromClone(bang_energy);
         customItem.createItemFromClone(ghost_energy);
+        customItem.createItemFromClone(redbull_energy);
+        customItem.createItemFromClone(redbull_watermelon_energy);
     }
 }

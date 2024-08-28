@@ -89,7 +89,7 @@ export class TraderHelper
                                      .addBuyRestriction(config.config['monster_doctor_stock'])
                                      .addMoneyCost(Money.ROUBLES, config.config['monster_doctor_trader_price'])
                                      .addLoyaltyLevel(config.config['monster_doctor_loyalty_level'])
-                                     .export(tables.traders[traderId]);\
+                                     .export(tables.traders[traderId]);
         }
         if (config.config['monster_lemonade_sold_by_trader']) {
              assortCreator.createSingleAssortItem("66ccf66fc9162d12270bb179")
@@ -97,6 +97,22 @@ export class TraderHelper
                                      .addBuyRestriction(config.config['monster_lemonade_stock'])
                                      .addMoneyCost(Money.ROUBLES, config.config['monster_lemonade_trader_price'])
                                      .addLoyaltyLevel(config.config['monster_lemonade_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['redbull_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("66ccf66fc9162d12270bb180")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['redbull_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['redbull_trader_price'])
+                                     .addLoyaltyLevel(config.config['redbull_loyalty_level'])
+                                     .export(tables.traders[traderId]);
+        }
+        if (config.config['redbull_watermelon_sold_by_trader']) {
+             assortCreator.createSingleAssortItem("66ccf66fc9162d12270bb181")
+                                     .addUnlimitedStackCount()
+                                     .addBuyRestriction(config.config['redbull_watermelon_stock'])
+                                     .addMoneyCost(Money.ROUBLES, config.config['redbull_watermelon_trader_price'])
+                                     .addLoyaltyLevel(config.config['redbull_watermelon_loyalty_level'])
                                      .export(tables.traders[traderId]);
         }
      }

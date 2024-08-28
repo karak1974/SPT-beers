@@ -3,13 +3,7 @@ import { DependencyContainer } from "tsyringe";
 import { IPreSptLoadMod } from "@spt/models/external/IPreSptLoadMod";
 import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
 import { ILogger } from "@spt/models/spt/utils/ILogger";
-import { PreSptModLoader } from "@spt/loaders/PreSptModLoader";
 import { DatabaseServer } from "@spt/servers/DatabaseServer";
-import { ImageRouter } from "@spt/routers/ImageRouter";
-import { ConfigServer } from "@spt/servers/ConfigServer";
-import { ConfigTypes } from "@spt/models/enums/ConfigTypes";
-import { ITraderConfig } from "@spt/models/spt/config/ITraderConfig";
-import { IRagfairConfig } from "@spt/models/spt/config/IRagfairConfig";
 import { JsonUtil } from "@spt/utils/JsonUtil";
 import { ILocationData } from "@spt/models/spt/server/ILocations";
 import { HashUtil } from "@spt/utils/HashUtil";
@@ -154,7 +148,7 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
         }
         this.logger.debug(`[${this.mod}] postDb Loaded`);
 
-        this.logger.success("[Hood Energy Drinks] Energy Drinks Loaded!");
+        this.logger.success("[Hoods Energy Drinks] Energy Drinks Loaded!");
     }
 }
 
