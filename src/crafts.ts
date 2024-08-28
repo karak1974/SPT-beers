@@ -24,7 +24,7 @@ export class Crafts {
                 },
                 {
                     "templateId": "59e3577886f774176a362503",
-                    "count": ,
+                    "count": 1,
                     "isFunctional": false,
                     "isEncoded": false,
                     "type": "Item"

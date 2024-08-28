@@ -150,11 +150,11 @@
     "monster_doctor_flea_price": 130000,
     "monster_doctor_stock": 1,
     "monster_doctor_loyalty_level": 4,
-    "monster_doctor_loot_duffle_bag_weight": 90,
-    "monster_doctor_loot_dead_scav_weight": 90,
-    "monster_doctor_loot_jacket_weight": 90,
-    "monster_doctor_loot_ration_supply_crate_weight": 90,
-    "monster_doctor_loot_ground_cache_weight": 90,
+    "monster_doctor_loot_duffle_bag_weight": 70,
+    "monster_doctor_loot_dead_scav_weight": 70,
+    "monster_doctor_loot_jacket_weight": 70,
+    "monster_doctor_loot_ration_supply_crate_weight": 70,
+    "monster_doctor_loot_ground_cache_weight": 70,
     "monster_doctor_loose_loot_multiplier": 0.1,
     
     "monster_lemonade_enable": true,
@@ -164,11 +164,11 @@
     "monster_lemonade_flea_price": 150000,
     "monster_lemonade_stock": 1,
     "monster_lemonade_loyalty_level": 4,
-    "monster_lemonade_loot_duffle_bag_weight": 70,
-    "monster_lemonade_loot_dead_scav_weight": 70,
-    "monster_lemonade_loot_jacket_weight": 70,
-    "monster_lemonade_loot_ration_supply_crate_weight": 70,
-    "monster_lemonade_loot_ground_cache_weight": 70,
+    "monster_lemonade_loot_duffle_bag_weight": 50,
+    "monster_lemonade_loot_dead_scav_weight": 50,
+    "monster_lemonade_loot_jacket_weight": 50,
+    "monster_lemonade_loot_ration_supply_crate_weight": 50,
+    "monster_lemonade_loot_ground_cache_weight": 50,
     "monster_lemonade_loose_loot_multiplier": 0.1
 
   }

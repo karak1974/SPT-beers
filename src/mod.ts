@@ -89,7 +89,23 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
                 //console.log(items[item])
             //}
         //}
-            
+
+        const hall_of_fame_lvl_1 = tables.templates.items["63dbd45917fff4dee40fe16e"];
+        const hall_of_fame_lvl_2 = tables.templates.items["65424185a57eea37ed6562e9"];
+        const hall_of_fame_lvl_3 = tables.templates.items["6542435ea57eea37ed6562f0"];
+        const hall_of_fame_all = [hall_of_fame_lvl_1, hall_of_fame_lvl_2, hall_of_fame_lvl_3];
+
+        for (const item of itemCreate.loot){
+            hall_of_fame_all.forEach((hall) => {
+                for (const slot of hall._props.Slots) {
+                    for (const filter of slot._props.filters) {
+                        if (!filter.Filter.includes(item.newId)) {
+                            filter.Filter.push(item.newId);
+                        }
+                    }
+                }
+            });
+        }  
             
         // Thanks to RainbowPC and his Lots Of Loot mod, based on his code inserting items into loose loot spawns
         for (const item of itemCreate.loot){
