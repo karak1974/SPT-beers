@@ -10,7 +10,7 @@ export class Crafts {
                 },
                 {
                     "templateId": "5751496424597720a27126da",
-                    "count": 3,
+                    "count": 1,
                     "isFunctional": false,
                     "isEncoded": false,
                     "type": "Item"
@@ -24,7 +24,7 @@ export class Crafts {
                 },
                 {
                     "templateId": "59e3577886f774176a362503",
-                    "count": 1,
+                    "count": ,
                     "isFunctional": false,
                     "isEncoded": false,
                     "type": "Item"
