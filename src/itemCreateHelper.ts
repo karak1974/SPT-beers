@@ -91,7 +91,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["monster_green_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["monster_green_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["monster_green_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["monster_green_loose_loot_multiplier"]
         }
 
         this.loot.push(monester_energy);
@@ -140,7 +140,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["monster_blue_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["monster_blue_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["monster_blue_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["monster_blue_loose_loot_multiplier"]
         }
 
         this.loot.push(monester_energy_blue);
@@ -189,7 +189,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["monster_white_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["monster_white_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["monster_white_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["monster_white_loose_loot_multiplier"]
         }
 
         this.loot.push(monester_energy_white);
@@ -238,7 +238,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["monster_strawberry_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["monster_strawberry_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["monster_strawberry_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["monster_strawberry_loose_loot_multiplier"]
         }
 
         this.loot.push(monester_energy_strawberry);
@@ -287,7 +287,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["ghost_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["ghost_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["ghost_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["ghost_loose_loot_multiplier"]
         }
 
         this.loot.push(ghost_energy);
@@ -336,7 +336,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["nos_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["nos_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["nos_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["nos_loose_loot_multiplier"]
         }
 
         this.loot.push(nos_energy);
@@ -385,7 +385,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["monster_punch_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["monster_punch_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["monster_punch_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["monster_punch_loose_loot_multiplier"]
         }
 
         this.loot.push(monester_energy_punch);
@@ -434,7 +434,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["bang_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["bang_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["bang_loot_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["bang_loot_loose_loot_multiplier"]
         }
 
         this.loot.push(bang_energy);
@@ -483,7 +483,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["monster_doctor_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["monster_doctor_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["monster_doctor_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["monster_doctor_loose_loot_multiplier"]
         }
 
         this.loot.push(monester_energy_doctor);
@@ -532,7 +532,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["monster_lemonade_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["monster_lemonade_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["monster_lemonade_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["monster_lemonade_loose_loot_multiplier"]
         }
 
         this.loot.push(monester_energy_lemonade);
@@ -581,7 +581,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["redbull_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["redbull_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["redbull_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["redbull_loose_loot_multiplier"]
         }
 
         this.loot.push(redbull_energy);
@@ -630,7 +630,7 @@ export class ItemCreateHelper {
                 "5d6fd13186f77424ad2a8c69": this.config["redbull_watermelon_loot_ration_supply_crate_weight"],
                 "5d6d2b5486f774785c2ba8ea": this.config["redbull_watermelon_loot_ground_cache_weight"],
             },
-            looseLootSpawnWeight: this.config["redbull_watermelon_loot_loot_weight"]
+            looseLootSpawnWeight: this.config["redbull_watermelon_loose_loot_multiplier"]
         }
 
         this.loot.push(redbull_watermelon_energy);

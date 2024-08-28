@@ -9,12 +9,12 @@
     "monster_blue_flea_price": 55000,
     "monster_blue_stock": 2,
     "monster_blue_loyalty_level": 1,
-    "monster_blue_loot_duffle_bag_weight": 200,
-    "monster_blue_loot_dead_scav_weight": 200,
-    "monster_blue_loot_jacket_weight": 200,
-    "monster_blue_loot_ration_supply_crate_weight": 200,
-    "monster_blue_loot_ground_cache_weight": 150,
-    "monster_blue_loot_loot_weight": 0.3,
+    "monster_blue_loot_duffle_bag_weight": 200, // lower = more rare, higher = more common
+    "monster_blue_loot_dead_scav_weight": 200, // lower = more rare, higher = more common
+    "monster_blue_loot_jacket_weight": 200, // lower = more rare, higher = more common
+    "monster_blue_loot_ration_supply_crate_weight": 200, // lower = more rare, higher = more common
+    "monster_blue_loot_ground_cache_weight": 150, // lower = more rare, higher = more common
+    "monster_blue_loose_loot_multiplier": 0.3, // 0.3 multiplied by max energy drink spawn chance = custom energy drink spawn chance in loose loot around the map 
 
     "monster_green_enable": true,
     "monster_green_effect_toggle": true,
@@ -28,7 +28,7 @@
     "monster_green_loot_jacket_weight": 175,
     "monster_green_loot_ration_supply_crate_weight": 175,
     "monster_green_loot_ground_cache_weight": 140,
-    "monster_green_loot_loot_weight": 0.23,
+    "monster_green_loose_loot_multiplier": 0.23,
     
 
     "monster_white_enable": true,
@@ -43,7 +43,7 @@
     "monster_white_loot_jacket_weight": 175,
     "monster_white_loot_ration_supply_crate_weight": 175,
     "monster_white_loot_ground_cache_weight": 175,
-    "monster_white_loot_loot_weight": 0.23,
+    "monster_white_loose_loot_multiplier": 0.23,
 
     "monster_strawberry_enable": true,
     "monster_strawberry_effect_toggle": true,
@@ -57,7 +57,7 @@
     "monster_strawberry_loot_jacket_weight": 150,
     "monster_strawberry_loot_ration_supply_crate_weight": 150,
     "monster_strawberry_loot_ground_cache_weight": 150,
-    "monster_strawberry_loot_loot_weight": 0.18,
+    "monster_strawberry_loose_loot_multiplier": 0.18,
 
     "redbull_enable": true,
     "redbull_effect_toggle": true,
@@ -71,7 +71,7 @@
     "redbull_loot_jacket_weight": 150,
     "redbull_loot_ration_supply_crate_weight": 150,
     "redbull_loot_ground_cache_weight": 150,
-    "redbull_loot_loot_weight": 0.18,
+    "redbull_loose_loot_multiplier": 0.18,
     
     "ghost_enable": true,
     "ghost_effect_toggle": true,
@@ -85,7 +85,7 @@
     "ghost_loot_jacket_weight": 140,
     "ghost_loot_ration_supply_crate_weight": 140,
     "ghost_loot_ground_cache_weight": 140,
-    "ghost_loot_loot_weight": 0.17,
+    "ghost_loose_loot_multiplier": 0.17,
 
     "nos_enable": true,
     "nos_effect_toggle": true,
@@ -99,7 +99,7 @@
     "nos_loot_jacket_weight": 130,
     "nos_loot_ration_supply_crate_weight": 130,
     "nos_loot_ground_cache_weight": 130,
-    "nos_loot_loot_weight": 0.15,
+    "nos_loose_loot_multiplier": 0.15,
 
     "monster_punch_enable": true,
     "monster_punch_effect_toggle": true,
@@ -113,7 +113,7 @@
     "monster_punch_loot_jacket_weight": 115,
     "monster_punch_loot_ration_supply_crate_weight": 115,
     "monster_punch_loot_ground_cache_weight": 115,
-    "monster_punch_loot_loot_weight": 0.15,
+    "monster_punch_loose_loot_multiplier": 0.15,
     
     "bang_enable": true,
     "bang_effect_toggle": true,
@@ -127,7 +127,7 @@
     "bang_loot_jacket_weight": 105,
     "bang_loot_ration_supply_crate_weight": 105,
     "bang_loot_ground_cache_weight": 105,
-    "bang_loot_loot_loot_weight": 0.15,
+    "bang_loot_loose_loot_multiplier": 0.15,
 
     "redbull_watermelon_enable": true,
     "redbull_watermelon_effect_toggle": true,
@@ -141,7 +141,7 @@
     "redbull_watermelon_loot_jacket_weight": 90,
     "redbull_watermelon_loot_ration_supply_crate_weight": 90,
     "redbull_watermelon_loot_ground_cache_weight": 90,
-    "redbull_watermelon_loot_loot_weight": 0.12,
+    "redbull_watermelon_loose_loot_multiplier": 0.12,
     
     "monster_doctor_enable": true,
     "monster_doctor_effect_toggle": true,
@@ -155,7 +155,7 @@
     "monster_doctor_loot_jacket_weight": 90,
     "monster_doctor_loot_ration_supply_crate_weight": 90,
     "monster_doctor_loot_ground_cache_weight": 90,
-    "monster_doctor_loot_loot_weight": 0.1,
+    "monster_doctor_loose_loot_multiplier": 0.1,
     
     "monster_lemonade_enable": true,
     "monster_lemonade_effect_toggle": true,
@@ -169,7 +169,7 @@
     "monster_lemonade_loot_jacket_weight": 70,
     "monster_lemonade_loot_ration_supply_crate_weight": 70,
     "monster_lemonade_loot_ground_cache_weight": 70,
-    "monster_lemonade_loot_loot_weight": 0.1
+    "monster_lemonade_loose_loot_multiplier": 0.1
 
   }
 }
