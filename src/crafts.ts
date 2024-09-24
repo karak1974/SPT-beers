@@ -1,4 +1,5 @@
 export class Crafts {
+    /* Could not implement this since how do zou make beer in Tarkov?
     public lemonade_craft =  {
             "_id": "lemonade_craft",
             "areaType": 8,
@@ -38,6 +39,6 @@ export class Crafts {
             "count": 1,
             "productionLimitCount": 0,
             "isEncoded": false
-        }
+    */
 
     }

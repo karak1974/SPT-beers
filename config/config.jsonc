@@ -1,19 +1,17 @@
 {
-  // All values can be changed and will be reflected in game on server restart
-
   "config": {
-    "asahi_enable": true,
-    "asahi_effect_toggle": true,
-    "asahi_sold_by_trader": true,
-    "asahi_trader_price": 40000,
-    "asahi_flea_price": 55000,
-    "asahi_stock": 2,
-    "asahi_loyalty_level": 1,
-    "asahi_loot_duffle_bag_weight": 200, // lower = more rare, higher = more common
-    "asahi_loot_dead_scav_weight": 200, // lower = more rare, higher = more common
-    "asahi_loot_jacket_weight": 200, // lower = more rare, higher = more common
-    "asahi_loot_ration_supply_crate_weight": 200, // lower = more rare, higher = more common
-    "asahi_loot_ground_cache_weight": 150, // lower = more rare, higher = more common
-    "asahi_loose_loot_multiplier": 0.3
+    "beer_asahi_enable": true,
+    "beer_asahi_effect_toggle": true,
+    "beer_asahi_sold_by_trader": true,
+    "beer_asahi_trader_price": 40000,
+    "beer_asahi_flea_price": 55000,
+    "beer_asahi_stock": 2,
+    "beer_asahi_loyalty_level": 1,
+    "beer_asahi_loot_duffle_bag_weight": 200, // lower = more rare, higher = more common
+    "beer_asahi_loot_dead_scav_weight": 200, // lower = more rare, higher = more common
+    "beer_asahi_loot_jacket_weight": 200, // lower = more rare, higher = more common
+    "beer_asahi_loot_ration_supply_crate_weight": 200, // lower = more rare, higher = more common
+    "beer_asahi_loot_ground_cache_weight": 150, // lower = more rare, higher = more common
+    "beer_asahi_loose_loot_multiplier": 0.3
   }
 }
