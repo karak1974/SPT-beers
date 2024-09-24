@@ -24,7 +24,7 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
     public config: any;
 
     constructor() {
-        this.mod = "Hoods Energy Drinks";
+        this.mod = "SPT-Beers";
     }
 
     public preSptLoad(container: DependencyContainer): void {
@@ -164,7 +164,7 @@ class HoodsEnergyDrinks implements IPreSptLoadMod, IPostDBLoadMod
         }
         this.logger.debug(`[${this.mod}] postDb Loaded`);
 
-        this.logger.success("[Hoods Energy Drinks] Energy Drinks Loaded!");
+        this.logger.success("[SPT-Beers] Energy Drinks Loaded!");
     }
 }
 
